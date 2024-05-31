@@ -13,7 +13,7 @@ function Blogs() {
   console.log(blogs);
   return (
     <>
-      <BlogNavbar />
+      <BlogNavbar/>
       <div className="container max-w-[960px] mt-12">
         <h1 className="text-4xl font-bold text-primary py-5">
           The JS Bin Blogs

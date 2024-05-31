@@ -44,9 +44,9 @@ function Html() {
   }
   return (
     <>
-    <Navbar htmlFunc={htmlDispChng} cssFunc={cssDispChng} jsFunc={jsDispChng}/>
+    <Navbar className=" z-50" htmlFunc={htmlDispChng} cssFunc={cssDispChng} jsFunc={jsDispChng}/>
 
-      <div className="flex grid grid-cols-*">
+      <div className="flex grid grid-cols-* z-0">
         <div className="border grid grid-cols-4">
             
             <Editor
