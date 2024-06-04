@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import JsbinMain from "./JsbinMain";
+import Html from "./Html";
 import Blogs from "./Pages/Blogs";
-import LoginPage from "./Pages/LoginPage";
 import DetailBlog from "./Pages/DetailBlog";
 
 
@@ -9,15 +8,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <JsbinMain/>,
+      element: <Html/>,
     },
     {
       path:"/blogs",
       element:<Blogs/>
-    },
-    {
-      path:"/login",
-      element:<LoginPage/>
     },
     {
       path:"/blogs/:id",

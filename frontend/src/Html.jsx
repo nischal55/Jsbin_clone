@@ -1,6 +1,6 @@
 import { Editor } from "@monaco-editor/react";
 import { useState } from "react";
-import Navbar from "./Navbar";
+import Navbar from "./Components/Navbar";
 
 function Html() {
   const [outputcode, setoutputcode] = useState("");
