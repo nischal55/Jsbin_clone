@@ -47,7 +47,7 @@ function Html() {
     <Navbar className=" z-50" htmlFunc={htmlDispChng} cssFunc={cssDispChng} jsFunc={jsDispChng}/>
 
       <div className="flex grid grid-cols-* z-0">
-        <div className="border grid grid-cols-4">
+        <div className="border md:grid md:grid-cols-4 grid md:grid-cols-1">
             
             <Editor
               height="90vh"

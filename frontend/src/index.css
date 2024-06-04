@@ -6,4 +6,7 @@
     .container {
         @apply mx-auto max-w-full  px-8  sm:max-w-[540px]  md:max-w-[720px]  lg:max-w-[960px] xl:max-w-[1170px];
       }
+      .menu-list{
+        @apply p-2 py-[12px] text-[16px] border-b border-slate-50 hover:bg-slate-200
+      }
 }
