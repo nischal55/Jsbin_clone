@@ -9,12 +9,22 @@ import { Link} from "react-router-dom";
 function Navbar(props) {
     const [isMenuOpen , setIsMenuOpen] = useState(false);
     const [mdMenuOpen , setMdMenuOpen] = useState(false);
+    const [addFile , setAddFile] = useState(false);
 
     function toggleMenu(){
       setIsMenuOpen(!isMenuOpen)
     }
     function mdTogggleMenu(){
       setMdMenuOpen(!mdMenuOpen)
+      setAddFile(false)
+    }
+    
+    function addToggleMenu(){
+      setAddFile(!addFile)
+      setMdMenuOpen(false)
+    }
+    function newFile(){
+      window.location.reload();
     }
  
   return (
@@ -25,30 +35,28 @@ function Navbar(props) {
            X Dismiss
          </button>
           <ul className="px-4">
-            <li className="menu-list"><Link>New</Link></li>
-            <li className="menu-list"><Link>Login / Register</Link></li>
+            <li className="menu-list"><Link onClick={newFile}>New</Link></li>
+            <li className="menu-list"><Link to="/login">Login / Register</Link></li>
             <li className="menu-list"><Link>Blogs</Link></li>
             <li className="menu-list"><Link>About</Link></li>
           </ul>
 
         </div>
-        <div className={`hidden ${mdMenuOpen ? "md:block transition-all" : "md:hidden transition-all"} md:bg-white md:h-48 top-10 w-64 border md:absolute md:z-40`}>
+        <div className={`hidden ${mdMenuOpen ? "md:block transition-all" : "md:hidden transition-all"} md:bg-white md:h-32 top-10 w-64 border md:absolute md:z-40`}>
         <ul>
-            <li className="menu-list"><Link>New</Link></li>
-            <li className="menu-list"><Link>Login / Register</Link></li>
+            <li className="menu-list"><Link onClick={newFile}>New</Link></li>
             <li className="menu-list"><Link>Blogs</Link></li>
             <li className="menu-list"><Link>About</Link></li>
           </ul>
         </div>
+     
         <div className="flex text-sm">
           <img src={Logo} alt="" className="h-10 p-1" onClick={toggleMenu} />
           <div className="hidden md:block md:p-2">
             <Link href="" className={`px-2 ${mdMenuOpen?"bg-white py-[12px]":"bg-transparent"}`} onClick={mdTogggleMenu}>File
-            <IoMdArrowDropdown className="inline-flex mx-2 cursor-pointer" />
+            <IoMdArrowDropdown className={` inline-flex mx-2 cursor-pointer`} />
             </Link>
-            <Link href="" className="px-2">
-              Add Library
-            </Link>
+           
           </div>
         </div>
         <div className="my-0.5 text-black">
@@ -75,12 +83,9 @@ function Navbar(props) {
           </button>
         </div>
         <div className="hidden md:text-sm  md:flex md:h-6 md:mt-2 ">
-        <a className="bg-yellow-400 px-2" href='https://github.com/login/oauth/authorize?client_id=Ov23litHAMVj9OrSNCOq&redirect_uri=http://localhost:5173/&state=Nischal123'>Login / Register</a>
+        <Link className="bg-yellow-400 px-2" to={`/login`}>Login / Register</Link>
           <Link to="/blogs" className="px-3">
             Blog
-          </Link>
-          <Link href="" className="px-3">
-            Help
           </Link>
         </div>
       </div>

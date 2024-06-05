@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Html from "./Html";
 import Blogs from "./Pages/Blogs";
 import DetailBlog from "./Pages/DetailBlog";
+import LoginPage from "./Pages/LoginPage";
 
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
     {
       path:"/blogs/:id",
       element:<DetailBlog/>
+    },
+    {
+      path:"/login",
+      element:<LoginPage/>
     }
   ]);
   return (

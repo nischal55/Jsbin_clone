@@ -11,10 +11,10 @@ function BlogNavbar() {
                 <img src={Logo} alt="" className="h-6 me-2 pb-1"  />
                     Return To JS BIN</Link>
                 </div>
-                <div className="text-sm font-bold me-32 py-2">
-                <Link className="px-4" to={`/blogs`}> Blogs</Link>
-                <Link className="px-4">Help</Link>
+                <div>
+                    <Link className="px-8 font-bold">Accounts</Link>
                 </div>
+
             </div>
         </>
     );
